@@ -1,0 +1,58 @@
+Notes
+1.Dependency Injection -
+
+1.Scenario Without & With Di -
+Creating obj instance at each page/ each method, establish the conn, perform and close the conn
+With DI - 
+Single interface and implementation change in a class is enough to share the 
+interface and implementation to multiple pages through DI
+ 
+
+2.Model - 
+Represents the shape of data in application
+a class in c# is used to describe the model 
+It can be a table or combination of multiple tables, transfered between the controllers and views
+
+
+3.View -
+Represents the user interface
+HTML and css that is visible to user 
+It interact with the controllers that is linked with Model
+
+
+
+4.Controllers - 
+Acts as interface bwt Models and Views t process the business logic and incommig request
+Manuplites the data using Models and interacts with Views to render the caliberated output
+
+Controller first receives the user event from client side
+It has various action methods based on which it redirects the req to one of the action method that will use the model to fetch the data that is to be rendered in the View.
+   
+Once the View is loaded it sends the response to the Controller and finally the controller passes the reesponse to user.
+Controller is the Heart of the Appliaction
+
+5. Routing -
+The url is made up of 2 main parts
+the first and common is the url itself which can be localhost or any domain specific url of a deployed project
+
+Following to it is the route which are like parameters to the url which redirects user across different pages in the app
+The conventions is like there will be the url ending with some port number and very first following to it will be the name of the controller and then the action method and last if any id parameter which is optional
+
+Ex - localhostxxxx/ControllerName/ActionMethodName/id?
+
+
+
+6. Action result -
+
+
+
+7. Entity framework core - 
+- for creating database and   perform db operations
+- 
+Code first migration
+
+
+
+
+ 
+

@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+      {
+        "name": "Launch .NET Core MVC",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "program": "${workspaceFolder}/bin/Debug/net6.0/HKnetMvcApp.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "serverReadyAction": {
+          "action": "openExternally",
+          "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+        },
+        "env": {
+          "ASPNETCORE_ENVIRONMENT": "Development",
+          "DOTNET_ROOT": "/usr/local/share/dotnet",
+          "BROWSER": "chrome"
+        },
+        "sourceFileMap": {
+          "/Users": "${workspaceFolder}"
+        }
+      }
+    ]
+  }
+  

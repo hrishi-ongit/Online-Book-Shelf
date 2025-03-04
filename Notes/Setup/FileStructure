@@ -1,0 +1,9 @@
+Project File structure
+1.Lunnchsettngs > version and port/url details
+2.wwwroot folders has the static files like js, css or other files except c#
+3.app.json > api, secret, payment keys, connection strings
+
+4.Program.cs -
+File responsible for running the application
+
+
