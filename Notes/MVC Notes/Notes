@@ -6,6 +6,9 @@ Creating obj instance at each page/ each method, establish the conn, perform and
 With DI - 
 Single interface and implementation change in a class is enough to share the 
 interface and implementation to multiple pages through DI
+
+With DI, Objects are less dependent and loosely coupled with each other, makes the structure modular and maintainable
+ 
  
 
 2.Model - 
@@ -50,7 +53,8 @@ Ex - localhostxxxx/ControllerName/ActionMethodName/id?
 - for creating database and   perform db operations
 - 
 Code first migration
-
+We create a file ApplicationDbContext with which we interact with the database table in backend
+Inside the container, we have the service  
 
 
 
