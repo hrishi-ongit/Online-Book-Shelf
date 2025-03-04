@@ -18,10 +18,17 @@ public class CategoryController : Controller
         _db = db;
     }
 
+    
+
     public IActionResult Index()
     {
-        var objCategoryList = _db.Categories.ToList();
-        System.Console.WriteLine(objCategoryList);
-        return View();
+        List<Category> CategoryList = _db.Categories.ToList();
+        CategoryList.Sort((l1,l2) => {
+            if (l1.DisplayOrder > l2.DisplayOrder) return 1;
+            else if(l1.DisplayOrder < l2.DisplayOrder) return -1;
+            else return 0;
+        });
+        IEnumerable<Category> EnumerableCategory = CategoryList;
+        return View(EnumerableCategory);
     }
 }
