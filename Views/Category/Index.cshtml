@@ -4,7 +4,19 @@
     ViewData["Title"] = "Index";
 }
 <h1>Category</h1>
-<p>Categories list to be updated soon...</p>
+@* <p>Categories list to be updated soon...</p> *@
+
+<div class="container p-3">
+    <div class="row p-4">
+        <div class="col-6">
+            <h2 class="text-primary">Category List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-asp-controller="Category" asp-action="Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle p-1"></i> Create New Category
+            </a>
+        </div>
+    </div>
 <table class="table table-bordered table-striped" style="width: 100%">
     <thead>
         <tr>
@@ -20,19 +32,20 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var obj in Model)
+        @foreach (var obj in Model)
         {
-            <tr>
-                <td width="30%">
-                    @obj.Name
-                </td>
-                <td width="20%">
-                    @obj.DisplayOrder
-                </td>
-                <td width="20%">
-                    @obj.CreatedOn
-                </td>
-            </tr>
+                <tr>
+                    <td width="30%">
+                        @obj.Name
+                    </td>
+                    <td width="20%">
+                        @obj.DisplayOrder
+                    </td>
+                    <td width="20%">
+                        @obj.CreatedOn
+                    </td>
+                </tr>
         }
     </tbody>
 </table>
+</div>
